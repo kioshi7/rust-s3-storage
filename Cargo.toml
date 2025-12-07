@@ -1,0 +1,23 @@
+[package]
+name = "rust-s3-storage"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance S3-compatible object storage written in pure Rust"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/твой_ник/rust-s3-storage"
+keywords = ["s3", "object-storage", "rust", "distributed-systems", "cloud"]
+categories = ["network-programming", "filesystem", "web-programming::http-server"]
+
+[dependencies]
+tokio = { version = "1.38", features = ["full"] }
+axum = "0.7"
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+tower-http = { version = "0.5", features = ["trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+bytes = "1.6"
+thiserror = "1.0"
+
+[dev-dependencies]
+tempfile = "3.10"
